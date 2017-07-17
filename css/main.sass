@@ -1,0 +1,442 @@
+@import "dependencies"
+
+$pink: rgb(242,23,128)
+
+*:focus
+  outline: none !important
+
+
+html,body
+  overflow-x: hidden !important
+
+.site
+  margin: 0
+
+
+h1,a
+  font-family: 'Montserrat', sans-serif
+
+// Nav
+.nav
+  position: relative
+  z-index: 1
+  .logo
+    top: 20px
+    left: 50px
+    position: absolute
+    h1
+      color: black
+      font-style: italic
+      font-weight: 900
+      font-size: 52px
+    hr
+      border-top: 10px solid $pink
+      width: 40px
+      margin-top: 0px
+  .right
+    position: absolute
+    top: 50px
+    right: 50px
+    ul
+      list-style: none
+      li
+        display: inline-block
+        margin-right: 100px
+        &:hover
+          hr
+            margin-right: 0%
+        a
+          text-decoration: none
+          font-size: 20px
+          font-weight: 600
+          text-transform: uppercase
+          color: #000000
+          transition: 0.2s all ease-in-out
+        hr
+          transition: 0.2s all ease-in-out
+          border-top: 5px solid $pink
+          margin-top: 5px
+          margin-right: 101%
+@media screen and (max-width: 1080px)
+  .nav .right ul li
+    margin-right: 30px
+@media screen and (max-width: 800px)
+  .nav .right ul li
+    margin-right: 10px
+    a
+      font-size: 16px
+@media screen and (max-width: 660px)
+  .nav .right ul li
+    display: none
+  .nav
+    .logo
+      left: calc(50% - 100px)
+
+// Header
+.header
+  position: relative
+  height: 100vh
+  .background
+    opacity: 0.8
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background:
+      image: url('../images/header.jpg')
+  .logo
+    position: relative
+    img
+      height: 300px
+      margin-top: calc(50vh - 150px)
+
+  .text-center
+    .arrow-down
+      position: relative
+      top: 150px
+      color: $pink
+      font-size: 70px
+      margin-top: 300px
+      transition: 0.2s all ease-in-out
+      cursor: pointer
+      &:hover
+        color: black
+@media screen and (max-height: 750px)
+  .header
+    .text-center
+      .arrow-down
+        top: 100px
+
+@media screen and (max-height: 600px)
+  .header
+    .text-center
+      .arrow-down
+        top: 50px
+@media screen and (max-height: 500px)
+  .header
+    .text-center
+      .arrow-down
+        top: 0px
+// Story
+.story
+  display: flex
+  height: 70vh
+  .left
+    position: relative
+    height: 100%
+    width: 40%
+    .background
+      z-index: -1
+      opacity: 0.1
+      position: absolute
+      height: 100%
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background:
+        image: url('../images/story-left.jpg')
+    .text
+      padding: 30% 15%
+      h1
+        text-transform: uppercase
+        font-size: 50px
+        font-weight: 900
+      hr
+        border-top: 5px solid $pink
+        width: 50px
+      p
+        font-weight: 600
+      a
+        font-size: 24px
+        text-decoration: none
+        color: $pink
+        text-transform: uppercase
+        transition: 0.2s all ease-in-out
+        font-weight: 600
+        &:hover
+          color: #000000
+  .right
+    height: 100%
+    width: 60%
+    background:
+      size: cover
+      image: url('../images/story-right.jpg')
+@media screen and (max-height: 800px)
+  .story
+    height: 700px
+@media screen and (max-width: 1060px)
+  .story
+    .left
+      .text
+        padding: 30% 13%
+        h1
+          font-size: 38px
+
+
+@media screen and (max-width: 800px)
+  .story
+    .left
+      width: 100%
+      .text
+        padding: 23% 13%
+        h1
+          font-size: 38px
+      .background
+        opacity: 0.2
+        background:
+          size: cover
+          image: url('../images/story-right.jpg')
+    .right
+      display: none
+
+.fare
+    display: flex
+    height: 70vh
+    .right
+      position: relative
+      width: 30%
+      .background
+        z-index: -1
+        opacity: 0.2
+        position: absolute
+        height: 100%
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        background:
+          image: url('../images/story-left.jpg')
+      .text
+        height: 100%
+        padding: 12% 15%
+        h1
+          text-transform: uppercase
+          font-size: 50px
+          font-weight: 900
+        hr
+          border-top: 5px solid $pink
+          width: 50px
+        p
+          font-weight: 600
+        a
+          font-size: 24px
+          text-decoration: none
+          color: $pink
+          text-transform: uppercase
+          transition: 0.2s all ease-in-out
+          font-weight: 600
+          &:hover
+            color: #000000
+        img
+          height: 150px
+    .left
+      height: 100%
+      width: 70%
+      background:
+        size: cover
+        image: url('../images/fresh-left.jpeg')
+@media screen and (max-height: 800px)
+  .fare
+    height: 700px
+@media screen and (max-width: 1528px)
+  .fare
+    .right
+      .text
+        h1
+          font-size: 38px
+@media screen and (max-width: 1160px)
+  .fare
+    .right
+      .text
+        padding: 12% 13%
+        h1
+          font-size: 30px
+        img
+          height: 100px
+@media screen and (max-width: 800px)
+  .fare
+    .right
+      width: 100%
+      .text
+        padding: 23% 13%
+        h1
+          font-size: 38px
+      .background
+        opacity: 0.2
+        background:
+          size: cover
+          image: url('../images/fresh-left.jpeg')
+    .left
+      display: none
+
+.drive
+  display: flex
+  height: 70vh
+  .left
+    position: relative
+    height: 100%
+    width: 40%
+    .background
+      z-index: -1
+      opacity: 0.1
+      position: absolute
+      height: 100%
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background:
+        image: url('../images/story-left.jpg')
+    .text
+      padding: 12% 15%
+      h1
+        text-transform: uppercase
+        font-size: 50px
+        font-weight: 900
+      hr
+        border-top: 5px solid $pink
+        width: 50px
+      p
+        font-weight: 600
+      a
+        font-size: 24px
+        text-decoration: none
+        color: $pink
+        text-transform: uppercase
+        transition: 0.2s all ease-in-out
+        font-weight: 600
+        &:hover
+          color: #000000
+      img
+        height: 150px
+  .right
+    height: 100%
+    width: 60%
+    background:
+      size: cover
+      image: url('../images/drive-right.jpg')
+@media screen and (max-height: 800px)
+  .drive
+    height: 700px
+@media screen and (max-width: 1160px)
+  .drive
+    .left
+      .text
+        padding: 15% 13%
+        h1
+          font-size: 30px
+        img
+          height: 100px
+
+@media screen and (max-width: 800px)
+  .drive
+    .left
+      width: 100%
+      .text
+        padding: 18% 13%
+        h1
+          font-size: 38px
+      .background
+        opacity: 0.2
+        background:
+          size: cover
+          image: url('../images/drive-right.jpg')
+    .right
+      display: none
+// Parallax
+.parallax
+  height: 100vh
+  background:
+    size: cover
+    attachment: fixed
+    image: url('../images/contact.jpg')
+@media screen and (max-width: 800px)
+  .parallax
+    height: 50vh
+// Contact
+.contact
+  height: 500px
+  position: relative
+  .background
+    z-index: -1
+    height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0.1
+    background:
+      size: cover
+      image: url('../images/story-left.jpg')
+  .left
+    .logo
+      top: 120px
+      left: 50px
+      position: absolute
+      h1
+        color: black
+        font-style: italic
+        font-weight: 900
+        font-size: 52px
+      hr
+        border-top: 10px solid $pink
+        width: 40px
+        margin-top: 0px
+    .text
+      position: absolute
+      top: 300px
+      left: 55px
+      h4
+        font-weight: 600
+        line-height: 15px
+        font-size: 16px
+      .alternative
+        margin-top: 40px
+      p
+        font-size: 14px
+        line-height: 12px
+
+
+  .social
+    position: absolute
+    right: 50px
+    bottom: 100px
+    a
+      text-decoration: none
+      color: $pink
+      font-size: 20px
+      letter-spacing: 20px
+      transition: 0.2s all ease-in-out
+      &:hover
+        color: black
+
+  .arrow-up
+    z-index: 2
+    font-size: 40px
+    position: absolute
+    bottom: 5px
+    color: $pink
+    left: calc(50% - 15px)
+@media screen and (max-width: 660px)
+  .contact
+    .left
+      .logo
+        top: 30px
+        left: calc(50% - 115px)
+      .text
+        top: 150px
+        left: calc(50% - 140px )
+    .right
+      .social
+        right: calc(50% - 80px)
+
+      //
+      //
+      //
+      //
+      //
+      //

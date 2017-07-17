@@ -1,0 +1,578 @@
+*:focus {
+  outline: none !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+.site {
+  margin: 0;
+}
+
+h1, a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+}
+
+.nav .logo {
+  top: 20px;
+  left: 50px;
+  position: absolute;
+}
+
+.nav .logo h1 {
+  color: black;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 52px;
+}
+
+.nav .logo hr {
+  border-top: 10px solid #f21780;
+  width: 40px;
+  margin-top: 0px;
+}
+
+.nav .right {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.nav .right ul {
+  list-style: none;
+}
+
+.nav .right ul li {
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.nav .right ul li:hover hr {
+  margin-right: 0%;
+}
+
+.nav .right ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000000;
+  transition: 0.2s all ease-in-out;
+}
+
+.nav .right ul li hr {
+  transition: 0.2s all ease-in-out;
+  border-top: 5px solid #f21780;
+  margin-top: 5px;
+  margin-right: 101%;
+}
+
+@media screen and (max-width: 1080px) {
+  .nav .right ul li {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav .right ul li {
+    margin-right: 10px;
+  }
+  .nav .right ul li a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .nav .right ul li {
+    display: none;
+  }
+  .nav .logo {
+    left: calc(50% - 100px);
+  }
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+
+.header .background {
+  opacity: 0.8;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/header.jpg");
+}
+
+.header .logo {
+  position: relative;
+}
+
+.header .logo img {
+  height: 300px;
+  margin-top: calc(50vh - 150px);
+}
+
+.header .text-center .arrow-down {
+  position: relative;
+  top: 150px;
+  color: #f21780;
+  font-size: 70px;
+  margin-top: 300px;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.header .text-center .arrow-down:hover {
+  color: black;
+}
+
+@media screen and (max-height: 750px) {
+  .header .text-center .arrow-down {
+    top: 100px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .header .text-center .arrow-down {
+    top: 50px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .header .text-center .arrow-down {
+    top: 0px;
+  }
+}
+
+.story {
+  display: flex;
+  height: 70vh;
+}
+
+.story .left {
+  position: relative;
+  height: 100%;
+  width: 40%;
+}
+
+.story .left .background {
+  z-index: -1;
+  opacity: 0.1;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("../images/story-left.jpg");
+}
+
+.story .left .text {
+  padding: 30% 15%;
+}
+
+.story .left .text h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.story .left .text hr {
+  border-top: 5px solid #f21780;
+  width: 50px;
+}
+
+.story .left .text p {
+  font-weight: 600;
+}
+
+.story .left .text a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #f21780;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
+  font-weight: 600;
+}
+
+.story .left .text a:hover {
+  color: #000000;
+}
+
+.story .right {
+  height: 100%;
+  width: 60%;
+  background-size: cover;
+  background-image: url("../images/story-right.jpg");
+}
+
+@media screen and (max-height: 800px) {
+  .story {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .story .left .text {
+    padding: 30% 13%;
+  }
+  .story .left .text h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .story .left {
+    width: 100%;
+  }
+  .story .left .text {
+    padding: 23% 13%;
+  }
+  .story .left .text h1 {
+    font-size: 38px;
+  }
+  .story .left .background {
+    opacity: 0.2;
+    background-size: cover;
+    background-image: url("../images/story-right.jpg");
+  }
+  .story .right {
+    display: none;
+  }
+}
+
+.fare {
+  display: flex;
+  height: 70vh;
+}
+
+.fare .right {
+  position: relative;
+  width: 30%;
+}
+
+.fare .right .background {
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("../images/story-left.jpg");
+}
+
+.fare .right .text {
+  height: 100%;
+  padding: 12% 15%;
+}
+
+.fare .right .text h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.fare .right .text hr {
+  border-top: 5px solid #f21780;
+  width: 50px;
+}
+
+.fare .right .text p {
+  font-weight: 600;
+}
+
+.fare .right .text a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #f21780;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
+  font-weight: 600;
+}
+
+.fare .right .text a:hover {
+  color: #000000;
+}
+
+.fare .right .text img {
+  height: 150px;
+}
+
+.fare .left {
+  height: 100%;
+  width: 70%;
+  background-size: cover;
+  background-image: url("../images/fresh-left.jpeg");
+}
+
+@media screen and (max-height: 800px) {
+  .fare {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1528px) {
+  .fare .right .text h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .fare .right .text {
+    padding: 12% 13%;
+  }
+  .fare .right .text h1 {
+    font-size: 30px;
+  }
+  .fare .right .text img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .fare .right {
+    width: 100%;
+  }
+  .fare .right .text {
+    padding: 23% 13%;
+  }
+  .fare .right .text h1 {
+    font-size: 38px;
+  }
+  .fare .right .background {
+    opacity: 0.2;
+    background-size: cover;
+    background-image: url("../images/fresh-left.jpeg");
+  }
+  .fare .left {
+    display: none;
+  }
+}
+
+.drive {
+  display: flex;
+  height: 70vh;
+}
+
+.drive .left {
+  position: relative;
+  height: 100%;
+  width: 40%;
+}
+
+.drive .left .background {
+  z-index: -1;
+  opacity: 0.1;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("../images/story-left.jpg");
+}
+
+.drive .left .text {
+  padding: 12% 15%;
+}
+
+.drive .left .text h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.drive .left .text hr {
+  border-top: 5px solid #f21780;
+  width: 50px;
+}
+
+.drive .left .text p {
+  font-weight: 600;
+}
+
+.drive .left .text a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #f21780;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
+  font-weight: 600;
+}
+
+.drive .left .text a:hover {
+  color: #000000;
+}
+
+.drive .left .text img {
+  height: 150px;
+}
+
+.drive .right {
+  height: 100%;
+  width: 60%;
+  background-size: cover;
+  background-image: url("../images/drive-right.jpg");
+}
+
+@media screen and (max-height: 800px) {
+  .drive {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .drive .left .text {
+    padding: 15% 13%;
+  }
+  .drive .left .text h1 {
+    font-size: 30px;
+  }
+  .drive .left .text img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .drive .left {
+    width: 100%;
+  }
+  .drive .left .text {
+    padding: 18% 13%;
+  }
+  .drive .left .text h1 {
+    font-size: 38px;
+  }
+  .drive .left .background {
+    opacity: 0.2;
+    background-size: cover;
+    background-image: url("../images/drive-right.jpg");
+  }
+  .drive .right {
+    display: none;
+  }
+}
+
+.parallax {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../images/contact.jpg");
+}
+
+@media screen and (max-width: 800px) {
+  .parallax {
+    height: 50vh;
+  }
+}
+
+.contact {
+  height: 500px;
+  position: relative;
+}
+
+.contact .background {
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+  background-size: cover;
+  background-image: url("../images/story-left.jpg");
+}
+
+.contact .left .logo {
+  top: 120px;
+  left: 50px;
+  position: absolute;
+}
+
+.contact .left .logo h1 {
+  color: black;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 52px;
+}
+
+.contact .left .logo hr {
+  border-top: 10px solid #f21780;
+  width: 40px;
+  margin-top: 0px;
+}
+
+.contact .left .text {
+  position: absolute;
+  top: 300px;
+  left: 55px;
+}
+
+.contact .left .text h4 {
+  font-weight: 600;
+  line-height: 15px;
+  font-size: 16px;
+}
+
+.contact .left .text .alternative {
+  margin-top: 40px;
+}
+
+.contact .left .text p {
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.contact .social {
+  position: absolute;
+  right: 50px;
+  bottom: 100px;
+}
+
+.contact .social a {
+  text-decoration: none;
+  color: #f21780;
+  font-size: 20px;
+  letter-spacing: 20px;
+  transition: 0.2s all ease-in-out;
+}
+
+.contact .social a:hover {
+  color: black;
+}
+
+.contact .arrow-up {
+  z-index: 2;
+  font-size: 40px;
+  position: absolute;
+  bottom: 5px;
+  color: #f21780;
+  left: calc(50% - 15px);
+}
+
+@media screen and (max-width: 660px) {
+  .contact .left .logo {
+    top: 30px;
+    left: calc(50% - 115px);
+  }
+  .contact .left .text {
+    top: 150px;
+    left: calc(50% - 140px);
+  }
+  .contact .right .social {
+    right: calc(50% - 80px);
+  }
+}
